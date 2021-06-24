@@ -8,6 +8,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/room.css" />
+    <link rel="stylesheet" href="styles/modal.css" />
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -153,7 +154,7 @@
         <h2>Excluir pergunta</h2>
         <p>Tem certeza que você deseja excluir esta pergunta?</p>
 
-        <form>
+        <form action="#">
           <label for-id="password" class="sr-only"></label>
           <input
             type="password"
@@ -163,8 +164,8 @@
           />
 
           <div class="buttons">
-            <div class="button">Cancelar</div>
-            <button>Sim, excluir</button>
+            <div class="button grey">Cancelar</div>
+            <button class="button red">Sim, excluir</button>
           </div>
         </form>
       </div>
