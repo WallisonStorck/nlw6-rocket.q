@@ -92,12 +92,59 @@
   line-height: 2.4rem;
 }
 
-/* .actions {
+/* QUESTIONS */
+.question-wrapper {
+  background: var(--light-blue);
+  margin-bottom: 0.8rem;
+  border-radius: 0 0.8rem 0.8rem 0.8rem;
+  padding: 2.4rem;
+}
+
+.question-wrapper .question-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.question-wrapper .question-content .user {
+  background: var(--blue);
+  clip-path: circle();
+  padding: 1.4rem;
+}
+
+.question-wrapper .question-content p {
+  margin-left: 1.6rem;
+  word-break: break-word; /* Palavras grandes não quebrar layout */
+  display: flex;
+  align-items: center;
+  min-height: 5.5rem;
+}
+
+.question-wrapper .actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.question-wrapper .actions > a {
   display: flex;
   align-items: center;
 }
 
-.check .delete {
-  display: flex;
-  align-items: center;
-} */
+.question-wrapper .actions > a > img {
+  margin-right: 0.8rem;
+}
+
+.question-wrapper .actions > a + a {
+  /* O ".question-wrapper .actions > a" está selecionando o primeiro link,
+  * ou seja, o primeiro "a", já o "+ a" seleciona o irmão de "a", ou seja,
+  * essas regras só serão aplicadas ao segundo "a" de Excluir. */
+  margin-left: 2.4rem;
+}
+
+.question-wrapper.read {
+  background: var(--grey-medium);
+}
+
+.question-wrapper.read .question-content .user {
+  background: var(--grey-blue);
+}
