@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 60% 40%; /* Video: 1:30:00 */
   grid-template-rows: 11.4rem 1fr;
-  /* Não sei porque nao surtiu efeito como da aula */
 
   grid-template-areas:
     'header header'
@@ -15,7 +14,7 @@ header {
 
 #bg {
   grid-area: left;
-  background: url('/assets/home-bg-img.svg') no-repeat top/contain;
+  background: url('/images/home-bg-img.svg') no-repeat top/contain;
   background-position-x: -10rem;
 }
 
@@ -41,6 +40,7 @@ main h2 {
 input {
   border: 0.2rem solid var(--grey-blue);
   padding: 0 1.6rem;
+  outline: none;
 }
 
 input,
@@ -50,7 +50,7 @@ button,
   margin-bottom: 1.8rem;
 }
 
-/* Separators */
+/******* Separators *******/
 
 .separator {
   display: flex;
@@ -73,7 +73,7 @@ button,
   height: 1px;
 }
 
-/* Balls */
+/******* Balls *******/
 
 .ball {
   width: 21.2rem;

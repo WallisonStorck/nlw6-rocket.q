@@ -15,12 +15,12 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <title>Criar Sala - Rocket.Q</title>
+    <title>Página Inicial - Rocket.Q</title>
   </head>
   <body>
-    <div id="create-pass" class="content">
+    <div id="home" class="content">
       <header>
-        <img src="assets/logo.svg" alt="Logo" />
+        <img src="images/logo.svg" alt="Logo" />
       </header>
       <div id="bg">
         <div class="ball top"></div>
@@ -29,19 +29,26 @@
       <main>
         <div class="container">
           <section>
-            <h2>Crie sua própria sala</h2>
-            <form action="">
-              <label class="sr-only" for="room-pass">Insira uma senha</label>
-              <input
-                id="room-pass"
-                type="password"
-                placeholder="Insira uma senha"
-              />
+            <h2>Entre como participante</h2>
+            <form action="#">
+              <label class="sr-only" for="room-id">Código da sala</label>
+              <input id="room-id" type="number" placeholder="Código da sala" />
               <button>
-                <img src="assets/users-white.svg" alt="Entrar na sala" />
-                Criar Sala
+                <img src="images/enter-room.svg" alt="Entrar na sala" />
+                Entrar na sala
               </button>
             </form>
+          </section>
+          <div class="separator">
+            <div></div>
+            <div>ou</div>
+            <div></div>
+          </div>
+          <section>
+            <h2>Crie sua própria sala, de forma fácil</h2>
+            <a href="create-room.html" class="button outlined">
+              <img src="images/users.svg" alt="Criar sala" />Criar Sala
+            </a>
           </section>
         </div>
       </main>
