@@ -19,12 +19,22 @@ deleteButton.forEach(element => {
 });
 
 function handleClick(event, check = true) {
-   event.preventDefault(); //Bloqueia o formulário para nao mudar de página
+   event.preventDefault(); //Bloqueia o formulário para nao mudar de página.
    const text = check ? "Deseja marcar como lida" : "Tem certeza que você deseja excluir";
+   const slug = check ? "check" : "delete";
+   const roomId = document.querySelector('#room-id').dataset.id;
+   console.log(roomId);
+   const questionId = event.target.dataset.id;
+
+   const form = document.querySelector('.modal form');
+   form.setAttribute('action', `/room/${roomId}/${questionId}/${slug}`);
+
+
    modalTitle.innerHTML = check ? "Marcar pergunta como lida" : "Excluir pergunta";
    modalDescription.innerHTML = check ? `${text} esta pergunta?` : `${text} esta pergunta?`;
    modalButton.textContent = check ? "Sim, marcar" : "Sim, excluir";
    check ? modalButton.classList.remove('red') : modalButton.classList.add('red');
+
    modal.open();
 }
 
