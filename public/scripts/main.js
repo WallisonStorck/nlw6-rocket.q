@@ -23,11 +23,10 @@ function handleClick(event, check = true) {
    const text = check ? "Deseja marcar como lida" : "Tem certeza que você deseja excluir";
    const slug = check ? "check" : "delete";
    const roomId = document.querySelector('#room-id').dataset.id;
-   console.log(roomId);
    const questionId = event.target.dataset.id;
 
    const form = document.querySelector('.modal form');
-   form.setAttribute('action', `/room/${roomId}/${questionId}/${slug}`);
+   form.setAttribute('action', `/question/${roomId}/${questionId}/${slug}`);
 
 
    modalTitle.innerHTML = check ? "Marcar pergunta como lida" : "Excluir pergunta";
