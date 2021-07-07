@@ -25,7 +25,12 @@
           <img src="/images/logo.svg" alt="Logo" />
         </a>
         <div class="buttons">
-          <div class="button outlined" id="room-id" data-id="<%= roomId %>">
+          <div
+            class="button outlined"
+            id="room-id"
+            onclick="copyToClipboard()"
+            data-id="<%= roomId %>"
+          >
             #<%= roomId %>
             <img src="/images/copy.svg" alt="Copiar numero da sala" />
           </div>
@@ -110,13 +115,13 @@
         <h2>Excluir pergunta</h2>
         <p>Tem certeza que você deseja excluir esta pergunta?</p>
 
-        <form action="#">
-          <label for-id="password" class="sr-only"></label>
+        <form action="#" method="POST">
+          <label for-id="password" class="sr-only">Digite sua senha</label>
           <input
             type="password"
             id="password"
             name="password"
-            placeholder="Entre com sua senha"
+            placeholder="Digite com sua senha"
           />
 
           <div class="buttons">

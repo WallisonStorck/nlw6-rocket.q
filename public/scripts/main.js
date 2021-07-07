@@ -37,3 +37,8 @@ function handleClick(event, check = true) {
    modal.open();
 }
 
+function copyToClipboard() {
+   // let numRoom = document.querySelector('#room-id');
+   console.log('chegou aqui');
+}
+

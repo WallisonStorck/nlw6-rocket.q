@@ -21,7 +21,7 @@
   <img alt="Rocket.Q" src=".github/Rocket_Q.png" width="100%">
 </p>
 
-## 🚀 Tecnologias
+## ✨ Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
@@ -40,6 +40,11 @@ O Rocket.Q é uma aplicação de interação através de perguntas, sendo possí
 ## 🔖 Layout
 
 Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/vp3iFfd1ohCbHyDX9jCiQi/Roquet.q). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+
+## 🚀 Novos Recursos
+
+- Clicar no número da sala e copiar para a Área de Transferência
+- Adicionar Modo Escuro
 
 ## :memo: Licença
 

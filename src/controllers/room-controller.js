@@ -4,25 +4,18 @@ module.exports = {
    async create(req, res) {
       const db = await Database();
       const pass = req.body.password;
-      let roomId = 0;
+      let roomId;
       let isRoom = true;
-
       while (isRoom) {
-         // Gera um numero de sala randômico
          for (let i = 0; i < 6; i++) {
             i == 0 ? roomId = Math.floor(Math.random() * 10).toString() :
                roomId += Math.floor(Math.random() * 10).toString();
          }
 
-         // Verifica se esse numero já existe
          const roomsExistsIDs = await db.all(`SELECT id FROM rooms`);
-         isRoom = roomsExistsIDs.some(roomsExistsID => {
-            roomsExistsID === roomId;
-         });
-
-         // Se já não existir um numero de sala igual do banco, então insere
+         isRoom = roomsExistsIDs.some(roomsExistsID =>
+            roomsExistsID === roomId);
          if (!isRoom) {
-            // Insere a sala no banco
             await db.run(`INSERT INTO rooms (
                id,
                pass
@@ -51,8 +44,12 @@ module.exports = {
          }
       }
 
-
-      res.render('room', { roomId: roomId, questions: questions, questionsRead: questionsRead, isNoQuestions: isNoQuestions });
+      res.render('room', {
+         roomId: roomId,
+         questions: questions,
+         questionsRead: questionsRead,
+         isNoQuestions: isNoQuestions
+      });
    },
 
    enter(req, res) {
